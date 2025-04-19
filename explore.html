@@ -1,232 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Explore</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <nav>
-        <img src="./Assets/logo/Jodna-logo.png" alt="Jodna Technologies Logo" class="logo">
-        <a class="explore" href="#">Explore</a>
-        <input class="search" type="search" placeholder="Search creatives work...">
-        <button class="share">Share your work <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none;"></button>
-        <a href="#"><img src="./Assets/icons/notification.png" alt="" width="20px"></a>
-        <div class="profile">
-            <div class="profile-image"></div>
-            <div>
-                <h2>Adewale Austin</h2>
-                <p>UI/UX Design Intern</p>
-            </div>
-            <div class="dropdown-arrow"></div>
+      <img
+        src="./Assets/logo/Jodna-logo.png"
+        alt="Jodna Technologies Logo"
+        class="logo"
+      />
+      <a class="explore" href="#">Explore</a>
+      <input
+        class="search"
+        type="search"
+        placeholder="Search creatives work..."
+      />
+      <button class="share">
+        Share your work
+        <img
+          src="./Assets/icons/right-arrow.png"
+          alt=""
+          width="14px"
+          style="margin: none"
+        />
+      </button>
+      <a href="#"
+        ><img src="./Assets/icons/notification.png" alt="" width="20px"
+      /></a>
+      <div class="profile">
+        <div class="profile-image"></div>
+        <div>
+          <h2>Adewale Austin</h2>
+          <p>UI/UX Design Intern</p>
         </div>
+        <div class="dropdown-arrow"></div>
+      </div>
     </nav>
 
     <div class="grid">
-        <div class="filter" id="filter">
-
-            <div>
-                <img src="" alt="">
-                <h3>Filter</h3>
+      <div class="filter" id="filter">
+        <div class="filter-section" id="filterSection">
+          <div class="header-filter">
+            <div class="filter-head" id="filterHead">
+              <img
+                src="./Assets/icons/mage_filter.png"
+                alt=""
+                width="24px"
+                height="24px"
+                style="display: none"
+                id="filterIcon"
+              />
+              <h2 style="font-size: inherit">Filter</h2>
             </div>
-            
-            <div class="filter-section" id="filterSection">
-                <div class="filter-head">
-                    <h2>Filter</h2>
-                    <img src="./Assets/icons/close-filter.png" class="close-filter-btn" id="closeFilter" width="32px">
-                </div>
-                <h2 style="font-weight: 500;">Tech Stack / Tools Used</h2>
-                <ul class="filter-options">
-                    <li>
-                        <div style="font-size: 19px; margin-bottom: 16px;">Design</div>
-                        <ul>
-                            <li class="checkbox">
-                                <label for="figma">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Figma
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="adobe xd">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Adobe XD
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="sketch">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Sketch
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="Canva">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Canva
-                                    </div>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div style="font-size: 19px; margin-bottom: 16px;">Frontend</div>
-                        <ul>
-                            <li class="checkbox">
-                                <label for="figma">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> React
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="adobe xd">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Angular
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="sketch">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> HTML/CSS
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="Canva">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Vue
-                                    </div>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div style="font-size: 19px; margin-bottom: 16px;">Backend</div>
-                        <ul>
-                            <li class="checkbox">
-                                <label for="figma">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Node
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="adobe xd">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Django
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="sketch">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Flask
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="Canva">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Laravel
-                                    </div>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div style="font-size: 19px; margin-bottom: 16px;">Others</div>
-                        <ul>
-                            <li class="checkbox">
-                                <label for="figma">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> WordPress
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="adobe xd">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Framer
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="sketch">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Webflow
-                                    </div>
-                                </label>
-                            </li>
-                            <li class="checkbox">
-                                <label for="Canva">
-                                    <div id="checkbox">
-                                        <span class="custom-checkbox">
-                                            <div class="check-fill"></div>
-                                        </span> Blender
-                                    </div>
-                                </label>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <img
+              src="./Assets/icons/close-filter.png"
+              class="close-filter-btn"
+              id="closeFilterBtn"
+              width="32px"
+            />
+          </div>
+          <h2 style="font-weight: 500">Tech Stack / Tools Used</h2>
+          <ul class="filter-options">
+            <li>
+              <div style="font-size: 19px; margin-bottom: 16px">Design</div>
+              <ul>
+                <li class="checkbox">
+                  <label for="figma">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Figma
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="adobe xd">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Adobe XD
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="sketch">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Sketch
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="Canva">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Canva
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div style="font-size: 19px; margin-bottom: 16px">Frontend</div>
+              <ul>
+                <li class="checkbox">
+                  <label for="react">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      React
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="angular">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Angular
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="html/css">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      HTML/CSS
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="html/css">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Tailwind
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="vue">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Vue
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div style="font-size: 19px; margin-bottom: 16px">Backend</div>
+              <ul>
+                <li class="checkbox">
+                  <label for="node">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Node
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="django">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Django
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="flask">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Flask
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="laravel">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Laravel
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div style="font-size: 19px; margin-bottom: 16px">Others</div>
+              <ul>
+                <li class="checkbox">
+                  <label for="wordpress">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      WordPress
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="framer">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Framer
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="webflow">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Webflow
+                    </div>
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label for="blender">
+                    <div id="checkbox">
+                      <span class="custom-checkbox">
+                        <div class="check-fill"></div>
+                      </span>
+                      Blender
+                    </div>
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="row-right first-row">
-            <input class="search" type="search" placeholder="Search creatives work...">
-            <div class="sort">
-                <img src="./Assets/icons/filter.png" alt="" width="18px" height="20px">
-                <p>Sort By</p>
-                <img src="./Assets/icons/dropdown-arrow.png" alt="" width="10px" height="5px">
-            </div>
+      <div class="row-right first-row">
+        <input
+          class="search"
+          type="search"
+          placeholder="Search creatives work..."
+        />
+        <div class="sort">
+          <img
+            src="./Assets/icons/filter.png"
+            alt=""
+            width="18px"
+            height="20px"
+          />
+          <p>Sort By</p>
+          <img
+            src="./Assets/icons/dropdown-arrow.png"
+            alt=""
+            width="10px"
+            height="5px"
+          />
         </div>
-        <div class="row-right second row"></div>
-        <div class="row-right third row"></div>
+      </div>
+      <div class="row-right second row"></div>
+      <div class="row-right third row">
     </div>
 
-
-
-
-
     <script src="web.js"></script>
-</body>
+  </body>
 </html>

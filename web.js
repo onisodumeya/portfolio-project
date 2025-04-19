@@ -20,13 +20,28 @@ checkbox.forEach((check, index) => {
   })
 })
 
-const closeFilter = document.getElementById("closeFilter");
+const closeFilterBtn = document.getElementById("closeFilterBtn");
 const filter = document.getElementById("filter")
 const filterSection = document.getElementById("filterSection")
+const filterHead = document.getElementById("filterHead")
+const filterIcon = document.getElementById("filterIcon")
 
-closeFilter.addEventListener("click", () => {
-  filterSection.style.display = "none"
+closeFilterBtn.addEventListener("click", () => {
   filter.classList.remove("filter")
   filter.classList.add("filter-closed")
   filter.style.height = "fit-content"
+  closeFilterBtn.style.display = "none"
+  filterHead.classList.remove("filter-head");
+  filterHead.classList.add("filter-head-closed");
+  filterIcon.style.display = "block"
+})
+
+filterHead.addEventListener("click", () => {
+    filter.classList.remove("filter-closed");
+    filter.classList.add("filter");
+    closeFilterBtn.style.display = "block";
+    filterHead.classList.remove("filter-head-closed");
+    filterHead.classList.add("filter-head");
+    filterIcon.style.display = "none";
+  
 })

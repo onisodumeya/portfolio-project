@@ -1,15 +1,15 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     font-family: "Nunito", sans-serif;
-    color: #1A1A1A;
+    color: #1a1a1a;
 }
 
-body{
-    background: #F2F2F2;
+body {
+    background: #f2f2f2;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,25 +17,25 @@ nav{
     padding: 24px 32px;
 }
 
-.logo{
+.logo {
     max-width: 220px;
 }
 
-.explore{
+.explore {
     font-size: 19px;
     font-weight: 600;
     padding: 10px 14px;
     text-decoration: none;
 }
 
-.explore:hover{
+.explore:hover {
     border-bottom: #006647 2px solid;
     color: #006647;
 }
 
 input[type="search"] {
     font-weight: 16px;
-    border: 1px #E6E6E6 solid;
+    border: 1px #e6e6e6 solid;
     border-radius: 100px;
     padding: 15px 35px;
     background: url("./Assets/icons/fi-rr-search.png") no-repeat;
@@ -43,23 +43,23 @@ input[type="search"] {
     background-position: 10px;
 }
 
-.share{
+.share {
     font-size: 19px;
     font-weight: 700;
     color: #006647;
     border: 2px solid #006647;
     border-radius: 100px;
     padding: 10px 20px;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
 }
 
-.profile{
+.profile {
     display: flex;
     gap: 16px;
     align-items: center;
 }
 
-.profile-image{
+.profile-image {
     background: url("./Assets/images/profile-image.jpg") no-repeat;
     background-size: cover;
     width: 60px;
@@ -67,67 +67,87 @@ input[type="search"] {
     border-radius: 100px;
 }
 
-.dropdown-arrow{
+.dropdown-arrow {
     background: url("./Assets/icons/dropdown-arrow.png") no-repeat;
     background-size: cover;
     height: 7px;
     width: 14px;
 }
 
-.grid{
+.grid {
     display: grid;
-    grid-template-columns:  0.8fr 2.1fr;
+    grid-template-columns: 0.8fr 2.1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 24px;
     padding: 18px 32px;
 }
 
-.filter-section{
+.filter-section {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.filter{
+.filter {
+    grid-row: span 3;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     gap: 16px;
+    height: fit-content;
     background: white;
     border-radius: 10px;
-    grid-row: span 3;
     padding: 16px 20px 32px 24px;
 }
 
-.filter-closed{
+.filter-closed {
     display: flex;
-    align-items: center;
     overflow: hidden;
+    max-height: 24px;
     background: white;
     border-radius: 10px;
-    grid-row: span 3;
-    padding: 5px 20px;
+    padding: 16px 20px;
 }
 
-.filter-head{
+.filter-head {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    font-size: 23px;
 }
 
-.close-filter-btn{
+.filter-head-closed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.checkbox{
+.header-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.close-filter-btn {
+    cursor: pointer;
+}
+
+.checkbox {
     list-style: none;
     margin-bottom: 8px;
 }
 
-#checkbox{
+#checkbox {
     cursor: pointer;
 }
 
-.filter-options>li{
+.filter-options>li {
     list-style: url("./Assets/icons/Ellipse\ 8.png");
 }
 
@@ -140,45 +160,44 @@ input[type="search"] {
     position: relative;
 }
 
-.check-fill{
+.check-fill {
     display: none;
     width: inherit;
     height: inherit;
     background-color: #006647;
 }
 
-.check-fill-block{
+.check-fill-block {
     display: block;
 }
 
-.check-border-green{
+.check-border-green {
     border-color: #006647;
 }
 
-label{
+label {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.filter-options li{
+.filter-options li {
     font-weight: 500;
 }
 
-.row-right>.search{
+.row-right>.search {
     background-color: white;
     width: 80%;
     border-radius: 10px;
 }
 
-.first-row{
+.first-row {
     display: flex;
     max-height: 64px;
-    border: 2px green solid;
     gap: 24px;
 }
 
-.sort{
+.sort {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -188,6 +207,6 @@ label{
     background-color: white;
 }
 
-.filter-padding{
+.filter-padding {
     padding: 15px 35px;
 }
