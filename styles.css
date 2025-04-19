@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Nunito", sans-serif;
+    color: #1A1A1A;
+}
+
+body{
+    background: #F2F2F2;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 24px 32px;
+}
+
+.logo{
+    max-width: 220px;
+}
+
+.explore{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-decoration: none;
+}
+
+.explore:hover{
+    border-bottom: #006647 2px solid;
+    color: #006647;
+}
+
+input[type="search"] {
+    font-weight: 16px;
+    border: 1px #E6E6E6 solid;
+    border-radius: 100px;
+    padding: 15px 35px;
+    background: url("./Assets/icons/fi-rr-search.png") no-repeat;
+    background-size: 16px;
+    background-position: 10px;
+}
+
+.share{
+    font-size: 19px;
+    font-weight: 700;
+    color: #006647;
+    border: 2px solid #006647;
+    border-radius: 100px;
+    padding: 10px 20px;
+    background-color: #FAFAFA;
+}
+
+.profile{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile-image{
+    background: url("./Assets/images/profile-image.jpg") no-repeat;
+    background-size: cover;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100px;
+}
+
+.dropdown-arrow{
+    background: url("./Assets/icons/dropdown-arrow.png") no-repeat;
+    background-size: cover;
+    height: 7px;
+    width: 14px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns:  0.8fr 2.1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+    padding: 18px 32px;
+}
+
+.filter-section{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 16px;
+    background: white;
+    border-radius: 10px;
+    grid-row: span 3;
+    padding: 16px 20px 32px 24px;
+}
+
+.filter-closed{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    grid-row: span 3;
+    padding: 5px 20px;
+}
+
+.filter-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-filter-btn{
+    cursor: pointer;
+}
+
+.checkbox{
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+#checkbox{
+    cursor: pointer;
+}
+
+.filter-options>li{
+    list-style: url("./Assets/icons/Ellipse\ 8.png");
+}
+
+.custom-checkbox {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #808080;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.check-fill{
+    display: none;
+    width: inherit;
+    height: inherit;
+    background-color: #006647;
+}
+
+.check-fill-block{
+    display: block;
+}
+
+.check-border-green{
+    border-color: #006647;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-options li{
+    font-weight: 500;
+}
+
+.row-right>.search{
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.first-row{
+    display: flex;
+    max-height: 64px;
+    border: 2px green solid;
+    gap: 24px;
+}
+
+.sort{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    border-radius: 10px;
+    width: 15%;
+    background-color: white;
+}
+
+.filter-padding{
+    padding: 15px 35px;
+}
