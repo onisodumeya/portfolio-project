@@ -15,6 +15,7 @@ nav {
     justify-content: space-between;
     background: white;
     padding: 24px 32px;
+    margin-bottom: 16px;
 }
 
 .logo {
@@ -74,39 +75,35 @@ input[type="search"] {
     width: 14px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 0.8fr 2.1fr;
-    grid-template-rows: repeat(3, 1fr);
+.content{
+    display: flex;
     gap: 24px;
-    padding: 18px 32px;
+    justify-content: space-between;
+    padding: 0px 32px;
 }
 
 .filter-section {
+
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
 .filter {
-    grid-row: span 3;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     gap: 16px;
     height: fit-content;
+    width: 30%;
     background: white;
     border-radius: 10px;
     padding: 16px 20px 32px 24px;
 }
 
 .filter-closed {
-    display: flex;
-    overflow: hidden;
-    max-height: 24px;
-    background: white;
-    border-radius: 10px;
-    padding: 16px 20px;
+    padding: 0px;
+    width: 24.2%;
 }
 
 .filter-head {
@@ -194,7 +191,12 @@ label {
 .first-row {
     display: flex;
     max-height: 64px;
-    gap: 24px;
+    width: 100%;
+    gap: 16px;
+}
+
+.first-row-filter-closed{
+    width: 72.5%;
 }
 
 .sort {
@@ -209,4 +211,83 @@ label {
 
 .filter-padding {
     padding: 15px 35px;
+}
+
+.content-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.content-grid-closed-filter{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.square{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 16px;
+}
+
+.img{
+    width: inherit;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+}
+
+.right-section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    align-items: end;
+}
+
+.right-section-filter-closed{
+    align-items: end;
+}
+
+.tags{
+    display: flex;
+    gap: 8px;
+}
+
+.tag-size{
+    font-size: 13px;
+}
+
+.design{
+    color: #1F5CAD;
+    background-color: #E9F1FB;
+}
+
+.beginner{
+    color: #00996B;
+    background-color: #E5FFF7;
+}
+
+.tutorial{
+    color: #6933FF;
+    background-color: #ECE5FF;
+}
+
+.tag-padding{
+    padding: 4px 10px;
+    border-radius: 100px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 600;
+    color: #808080;
 }
