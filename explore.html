@@ -17,7 +17,7 @@
       src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Explore</title>
   </head>
 
@@ -34,17 +34,15 @@
         type="search"
         placeholder="Search creatives work..."
       />
-      <button class="share">
-        Share your work
-        <img
-          src="./Assets/icons/right-arrow.png"
-          alt=""
-          width="14px"
-          style="margin: none"
-        />
-      </button>
-      <a href="#"
-        ><img src="./Assets/icons/notification.png" alt="" width="20px"
+      <a href="./upload-portfolio.html">
+        <button class="share secondary-btn">
+          Share your work
+          <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
+        </button>
+      </a>
+      <a href="#" style="position: relative;">
+        <div class="notification-bubble" id="notificationCount"></div>
+        <img src="./Assets/icons/notification.png" alt="" width="20px"
       /></a>
       <div class="profile">
         <div class="profile-image"></div>
@@ -78,7 +76,7 @@
               <ul>
                 <li class="checkbox">
                   <label for="figma">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -88,7 +86,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="adobe xd">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -98,7 +96,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="sketch">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -108,7 +106,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="Canva">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -123,7 +121,7 @@
               <ul>
                 <li class="checkbox">
                   <label for="react">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -133,7 +131,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="angular">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -143,7 +141,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="html/css">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -153,7 +151,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="html/css">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -163,7 +161,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="vue">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -178,7 +176,7 @@
               <ul>
                 <li class="checkbox">
                   <label for="node">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -188,7 +186,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="django">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -198,7 +196,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="flask">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -208,7 +206,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="laravel">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -223,7 +221,7 @@
               <ul>
                 <li class="checkbox">
                   <label for="wordpress">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -233,7 +231,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="framer">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -243,7 +241,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="webflow">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -253,7 +251,7 @@
                 </li>
                 <li class="checkbox">
                   <label for="blender">
-                    <div id="checkbox">
+                    <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
                       </span>
@@ -276,76 +274,34 @@
             <img src="./Assets/icons/dropdown-arrow.png" alt="" width="10px" height="5px" />
           </div>
         </div>
+        <div class="second-row">
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <div class="item">All<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">UI/UX Design<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Frontend<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Graphic Design<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Backend<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Web Dev<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Mobile Apps<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Animation<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Branding<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Motion Design<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">Illustration<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+              <div class="item">3D<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+            </div>
+          </div>
+        </div>
         <div class="content-grid" id="contentGrid">
-          <div class="square">
-            <div class="img" style="background-image: url('./Assets/images/explore-img-1.png');"></div>
-            <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
-            <div class="tags">
-              <p class="design tag-size tag-padding">Design</p>
-              <p class="beginner tag-size tag-padding">Design</p>
-              <p class="tutorial tag-size tag-padding">Design</p>
-            </div>
-            <div class="info">
-              <p style="color: inherit;">25 mins</p>
-              <p style="color: inherit;">890 views</p>
-            </div>
-          </div>
-          <div class="square">
-            <div class="img" style="background-image: url('./Assets/images/explore-img-1.png');"></div>
-            <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
-            <div class="tags">
-              <p class="design tag-size tag-padding">Design</p>
-              <p class="beginner tag-size tag-padding">Design</p>
-              <p class="tutorial tag-size tag-padding">Design</p>
-            </div>
-            <div class="info">
-              <p style="color: inherit;">25 mins</p>
-              <p style="color: inherit;">890 views</p>
-            </div>
-          </div>
-          <div class="square">
-            <div class="img" style="background-image: url('./Assets/images/explore-img-1.png');"></div>
-            <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
-            <div class="tags">
-              <p class="design tag-size tag-padding">Design</p>
-              <p class="beginner tag-size tag-padding">Design</p>
-              <p class="tutorial tag-size tag-padding">Design</p>
-            </div>
-            <div class="info">
-              <p style="color: inherit;">25 mins</p>
-              <p style="color: inherit;">890 views</p>
-            </div>
-          </div>
-          <div class="square">
-            <div class="img" style="background-image: url('./Assets/images/explore-img-1.png');"></div>
-            <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
-            <div class="tags">
-              <p class="design tag-size tag-padding">Design</p>
-              <p class="beginner tag-size tag-padding">Design</p>
-              <p class="tutorial tag-size tag-padding">Design</p>
-            </div>
-            <div class="info">
-              <p style="color: inherit;">25 mins</p>
-              <p style="color: inherit;">890 views</p>
-            </div>
-          </div>
-          <div class="square">
-            <div class="img" style="background-image: url('./Assets/images/explore-img-1.png');"></div>
-            <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
-            <div class="tags">
-              <p class="design tag-size tag-padding">Design</p>
-              <p class="beginner tag-size tag-padding">Design</p>
-              <p class="tutorial tag-size tag-padding">Design</p>
-            </div>
-            <div class="info">
-              <p style="color: inherit;">25 mins</p>
-              <p style="color: inherit;">890 views</p>
-            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="web.js"></script>
+    <script src="./javascript/web.js"></script>
+    <script src="./javascript/filter.js"></script>
+    <script src="./javascript/categories.js"></script>
+    <script src="./javascript/gridContent.js"></script>
+    <script src="./javascript/notification.js"></script>
   </body>
 </html>
