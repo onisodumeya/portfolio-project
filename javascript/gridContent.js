@@ -11,7 +11,7 @@ const exploreImages = [
 
 const contentGrid = document.getElementById("contentGrid");
 
-exploreImages.forEach((image) => {
+exploreImages.forEach(image => {
   const div = document.createElement("div");
   div.classList.add("square");
   div.innerHTML = `<div class="img" style="background-image: url('${image}');"></div>

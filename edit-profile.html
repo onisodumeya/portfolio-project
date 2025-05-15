@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Edit Profile</title>
+</head>
+
+<body>
+    <div class="wallpaper">
+        <nav class="edit-profile-nav">
+            <img src="./Assets/logo/Jodna-logo.png" alt="Jodna Technologies Logo" class="logo" />
+            <a class="explore" href="#">Explore</a>
+            <input class="search" type="search" placeholder="Search creatives work..." />
+            <a href="./upload-portfolio.html" id="share">
+                <button class="share secondary-btn">
+                    Share your work
+                    <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
+                </button>
+            </a>
+            <a href="#" style="position: relative;">
+                <div class="notification-bubble" id="notificationCount"></div>
+                <img src="./Assets/icons/notification.png" alt="" width="20px" />
+            </a>
+            <div class="profile">
+                <div class=" profile-picture profile-picture-nav"></div>
+                <div>
+                    <h2>Adewale Austin</h2>
+                    <p>UI/UX Design Intern</p>
+                </div>
+                <div class="dropdown-arrow"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="content" style="margin-top: 32px;">
+        <div class="detail-frame">
+            <div class="profile-picture picture-container" id="profilePicture"></div>
+
+            <div style="width: 246px; text-align: center;">
+                <h1 id="userName">Adewale Austin</h1>
+                <p>UI/UX Designer | Frontend Developer</p>
+            </div>
+
+            <button class="primary-btn" style="align-self: center;">
+                Edit Profile
+            </button>
+
+            <div class="profile-analytics">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
+                    Portfolio Views
+                    <div id="viewsData">800</div>
+                    <!-- <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px"> -->
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
+                    Likes
+                    <div id="likesData">200</div>
+                    <!-- <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px"> -->
+                </div>
+            </div>
+
+            <div class="profile-analytics">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
+                    Help
+                    <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px">
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
+                    Settings
+                    <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px">
+                </div>
+            </div>
+
+            <button class="secondary-btn" style="margin-top: 100px;" id="logout">
+                <img src="./Assets/icons/logout-icon.png" alt="" height="16px">
+                Logout
+            </button>
+
+        </div>
+
+        <div class="edit-section">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <h1>Edit Profile</h1>
+                <h3 style="font-weight: 500; color: #808080;">Keep your personal details private. Information you add here
+                    is visible to anyone who can view your profile.</h3>
+            </div>
+
+            <div class="section">
+                Photo
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div class="profile-picture profile-container"></div>
+                    <button class="secondary-btn" style="height: fit-content;">Change</button>
+                </div>
+            </div>
+
+            <div class="edit-section text-inputs">
+                <div class="section edit-name">
+                    <label for="firstName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
+                        First name
+                        <input class="input" type="text" id="firstName" Value="Austin">
+                    </label>
+                    <label for="lastName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
+                        Last name
+                        <input class="input" type="text" id="lastName" Value="Austin">
+                    </label>
+                </div>
+                
+                <div class="section about">
+                    <label for="about" style="display: flex; flex-direction: column; align-items: start; color: inherit; width: 100%;">
+                        About
+                        <textarea class="input" name="about" id="about">I’m a UI UX Designer and also Frontend Developer</textarea>
+                    </label>
+                </div>
+
+                <div class="section website">
+                    <label for="website" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
+                        Website
+                        <input class="input w" type="text" id="website" Value="https://">
+                    </label>
+                </div>
+
+                <div class="section website">
+                    <label for="userName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
+                        Username
+                        <input class="input w" type="text" id="userName" Value="Adewaleaustin">
+                    </label>
+                </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="./javascript/web.js"></script>
+    <script src="./javascript/notification.js"></script>
+    <script>
+        const logout = document.getElementById("logout")
+        
+        logout.addEventListener("mouseenter", () => {
+            logout.classList.add("mouseenter-sec-btn")
+            logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
+        })
+        logout.addEventListener("mouseleave", () => {
+            logout.classList.remove("mouseenter-sec-btn")
+            logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
+        })
+    </script>
+</body>
+
+</html>

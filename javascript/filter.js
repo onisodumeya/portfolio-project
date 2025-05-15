@@ -2,12 +2,21 @@ const checkbox = document.querySelectorAll(".check");
 const checkFill = document.querySelectorAll(".check-fill");
 const checkBorder = document.querySelectorAll(".custom-checkbox");
 
+let filterText;
+
 checkbox.forEach((check, index) => {
   check.addEventListener("click", () => {
     checkFill[index].classList.toggle("check-fill-block");
     checkBorder[index].classList.toggle("check-border-green");
+
+    filterText = check.lastChild;
+
+    console.log(filterText);
+    
+    
   });
 });
+
 
 const filter = document.getElementById("filter");
 const filterSection = document.getElementById("filterSection");
