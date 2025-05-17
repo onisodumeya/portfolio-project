@@ -27,7 +27,7 @@
                     <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
                 </button>
             </a>
-            <a href="#" style="position: relative;">
+            <a href="./notifications.html" style="position: relative;">
                 <div class="notification-bubble" id="notificationCount"></div>
                 <img src="./Assets/icons/notification.png" alt="" width="20px" />
             </a>
@@ -138,7 +138,7 @@
     </div>
 
     <div style="display: flex; gap: 20px; padding-left: 30px; margin-bottom: 40px;">
-        <button class="primary-btn" id="saveChanges">Save Changes</button>
+        <button class="inactive-btn" id="saveChanges">Save Changes</button>
         <button class="secondary-btn" onclick="history.back()">cancel</button>
     </div>
 
@@ -146,14 +146,27 @@
     <script src="./javascript/notification.js"></script>
     <script>
         const logout = document.getElementById("logout")
+        const input = document.querySelectorAll(".input")        
         
-        logout.addEventListener("mouseenter", () => {
-            logout.classList.add("mouseenter-sec-btn")
-            logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
-        })
-        logout.addEventListener("mouseleave", () => {
-            logout.classList.remove("mouseenter-sec-btn")
-            logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
+        const saveBtn = document.getElementById("saveChanges")
+                
+
+        // logout.addEventListener("mouseenter", () => {
+        //     logout.classList.add("mouseenter-sec-btn")
+        //     logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
+        // })
+        // logout.addEventListener("mouseleave", () => {
+        //     logout.classList.remove("mouseenter-sec-btn")
+        //     logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
+        // })
+
+        input.forEach(change => {
+            console.log(change);
+            
+            change.addEventListener("keydown", () => {
+                saveBtn.classList.remove("inactive-btn")
+                saveBtn.classList.add("primary-btn")
+            })
         })
     </script>
 </body>

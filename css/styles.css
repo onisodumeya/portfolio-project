@@ -62,6 +62,17 @@ input[type="search"] {
     transition: 0.2s;
 }
 
+.inactive-btn{
+    width: fit-content;
+    font-size: 19px;
+    font-weight: 700;
+    color: #cbcbcb;
+    border: none;
+    border-radius: 100px;
+    padding: 10px 20px;
+    background-color: #5f5f5f;
+}
+
 .primary-btn:hover{
     background-color: #053f2e;
 }
@@ -512,8 +523,8 @@ label {
 }
 
 .profile-container{
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: #528FE0 2px solid;
     margin-top: 10px;
@@ -547,4 +558,102 @@ label>.input{
 
 .w{
     width: 95% !important;
+}
+
+.ml{
+    margin-left: 40px;
+}
+
+.mr{
+    margin-right: 40px;
+}
+
+.mt{
+    margin-top: 40px;
+}
+
+.mb{
+    margin-bottom: 40px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.notification-content{
+    width: 100%;
+}
+
+.notifications{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.notification-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("../Assets/images/profile-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.notification-container{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    background-color: white;
+    min-height: 90vh;
+    padding: 40px;
+}
+
+.notifications-parent{
+    padding-top: 20px;
+}
+
+.bookmark{
+    width: 15px;
+    height: 15px;
+    background-image: url("../Assets/icons/heart.png");
+    background-size: cover;
+}
+
+.message{
+    width: 15px;
+    height: 15px;
+    background-image: url("../Assets/icons/directbox-default.png");
+    background-size: cover;
+}
+
+.comment{
+    width: 15px;
+    height: 15px;
+    background-image: url("../Assets/icons/Ellipse\ 26.png");
+    background-size: cover;
+}
+
+.notification-dashboard{
+    width: 20%;
+    background-color: white;
+    height: 1000px;
+    padding: 20px;
+}
+
+.selected{
+    color: #006647;
+}
+
+.fw-500{
+    font-weight: 500;
 }
