@@ -7,15 +7,20 @@
 
 body {
     background: #FAFAFA;
+    position: relative;
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
     padding: 24px 32px;
     margin-bottom: 16px;
+}
+
+.small-screen-nav{
+    display: none;
 }
 
 .logo {
@@ -153,6 +158,9 @@ input[type="search"] {
     padding: 0px 32px;
     margin-bottom: 40px;
 }
+.filter-smaller-screens{
+    display: none !important;
+}
 
 .filter-section {
 
@@ -169,7 +177,7 @@ input[type="search"] {
 
 .filter {
     position: relative;
-    z-index: 10;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -231,7 +239,7 @@ input[type="search"] {
 }
 
 .filter-options>li {
-    list-style: url("./Assets/icons/Ellipse\ 8.png");
+    list-style: url("./Assets/icons/Ellipse\8.png");
 }
 
 .custom-checkbox {
@@ -639,7 +647,7 @@ label>.input{
 .comment{
     width: 15px;
     height: 15px;
-    background-image: url("../Assets/icons/Ellipse\ 26.png");
+    background-image: url("../Assets/icons/Ellipse-26.png");
     background-size: cover;
 }
 
@@ -656,4 +664,41 @@ label>.input{
 
 .fw-500{
     font-weight: 500;
+}
+
+.nav-items{
+    width: 80%;
+    height: 100vh;
+    top: 0px;
+    left: -100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.nav-items .share{
+    font-size: 12px;
+    gap: 8px;
+}
+
+.nav-items a{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-items .profile h2{
+    font-size: 20px;
+}
+
+.nav-items .profile p{
+    font-size: 14px;
+}
+
+.nav-items .profile-picture-nav{
+    width: 40px;
 }
