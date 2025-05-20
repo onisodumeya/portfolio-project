@@ -1,5 +1,10 @@
 @media (max-width: 1200px) {
 
+    body{
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
     .large-screen-nav{
         display: none;
     }
@@ -21,12 +26,86 @@
         margin-bottom: 0px;
     }
 
+    .notifications p{
+        width: fit-content;
+        
+    }
+
+    .notifications strong{
+        display: block;
+    }
+
+    .notification-dashboard{
+        display: none;
+    }
+
+    .notification-container{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .notifications-parent{
+        
+    }
+
+    .notification-icons{
+        width: 8px;
+        height: 8px;
+    }
+
+    .notification-img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .buttons{
+        padding: 10px !important;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start !important;
+        justify-content: flex-end;
+    }
+    
+    .buttons-sub{
+        flex-direction: column-reverse;
+        align-items: flex-end !important;
+    }
+
+    .upload-container{
+        padding: 20px;
+    }
+
     .sort{
         display: none;
     }
 
-    .filter-large{
-        display: none !important;
+    .primary-btn{
+        font-size: 16px;
+    }
+
+    .secondary-btn{
+        font-size: 16px;
+    }
+
+    .tertiary-btn{
+        font-size: 16px;
+    }
+
+    .filter-smaller-screens{
+        display: flex !important;
+    }
+
+    .filter{
+        display: none;
+        position: absolute;
+        z-index: 25;
+        width: 80%;
+        top: 1000px;
+        height: 91vh;
+        overflow: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        border-radius: 10px 10px 0px 0px;
+        transition: 0.3s;
     }
 
     .content-grid{

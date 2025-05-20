@@ -60,10 +60,12 @@
     <div class="nav-items" id="navItems">
       <div style="margin-bottom: 40px; display: flex; align-items: center; width: 100%; justify-content: space-between;">
         <i class="fa-solid fa-xmark" style="font-size: 24px; cursor: pointer;" id="closeMenu"></i>
-        <button class="share secondary-btn">
-          Share your work
-          <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
-        </button>
+        <a href="./upload-portfolio.html">
+          <button class="share secondary-btn">
+            Share your work
+            <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
+          </button>
+        </a>
 
       </div>
 
@@ -82,7 +84,7 @@
     </div>
 
      <div class="content">
-      <div class="filter filter-large" id="filter">
+      <div class="filter" id="filter">
         <div id="closedFilterDisplay" style="display: none; gap: 8px; justify-content: center; align-items: center; padding: 11px; cursor: pointer;">
           <img src="./Assets/icons/mage_filter.png" alt="" width="24px">
           <h3>Filter</h3>
@@ -294,8 +296,8 @@
       
       <div class="right-section" id="rightSection">
         <div class="row-right first-row" id="firstRow">
-          <div class="filter filter-smaller-screens" id="filterSmallScreens">
-            <img src="./Assets/icons/mage_filter.png" alt="" width="24px">
+          <div class=" filter-smaller-screens" id="filterSmallScreens">
+            <img src="./Assets/icons/mage_filter.png" alt="" width="24px" height="24px">
           </div>
           <input class="search" type="search" placeholder="Search creatives work..." />
           <div class="sort">

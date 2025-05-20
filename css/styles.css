@@ -160,6 +160,13 @@ input[type="search"] {
 }
 .filter-smaller-screens{
     display: none !important;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: #E6E6E6 solid 1px;
 }
 
 .filter-section {
@@ -630,25 +637,28 @@ label>.input{
     padding-top: 20px;
 }
 
-.bookmark{
+.notification-icons{
     width: 15px;
     height: 15px;
+}
+
+.bookmark{
+    
     background-image: url("../Assets/icons/heart.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .message{
-    width: 15px;
-    height: 15px;
     background-image: url("../Assets/icons/directbox-default.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .comment{
-    width: 15px;
-    height: 15px;
     background-image: url("../Assets/icons/Ellipse-26.png");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .notification-dashboard{
