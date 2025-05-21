@@ -47,7 +47,7 @@ const smfilter = document.getElementById("filterSmallScreens");
 
 let intervalId
 
-if(windowWidth <= 1200){
+if(windowWidth <= 800){
 
   smfilter.addEventListener("click", () => {
     backgroundCover.style.display = "block";
@@ -56,19 +56,20 @@ if(windowWidth <= 1200){
 
     // Use setTimeout instead of setInterval if it's a one-time movement
     intervalId = setTimeout(() => {
-      filter.style.top = "20px";
+      filter.style.left = "0px";
+      filter.style.top = "0px";
     }, 200);
   });
 
   closeFilter.addEventListener("click", () => {
-    filter.style.top = "1000px";
+    filter.style.left = "-100%";
 
-    // Wait for animation to finish before hiding
+    
     setTimeout(() => {
       filter.style.display = "none";
       backgroundCover.style.display = "none";
       document.body.style.overflow = "scroll";
-    }, 200); // match this to your CSS transition if any
+    }, 200);
   });
 
 }else{

@@ -19,7 +19,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/styles.css"/>
-    <link rel="stylesheet" href="./css/media-queries.css"/>
+    <link rel="stylesheet" href="./css/media-queries-mobile.css"/>
+    <link rel="stylesheet" href="./css/media-queries-tablets.css"/>
     <title>Explore</title>
   </head>
 
@@ -56,7 +57,7 @@
       <i class="fa-solid fa-bars" style="font-size: 24px; cursor: pointer;" id="menuBtn"></i>
     </nav>
     
-    <div id="backgroundCover" style="display: none; position: absolute; top: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 6; width: 100%; height: 100vh;"></div>
+    <div id="backgroundCover" style="display: none; position: fixed; top: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 6; width: 100%; height: 100vh;"></div>
     <div class="nav-items" id="navItems">
       <div style="margin-bottom: 40px; display: flex; align-items: center; width: 100%; justify-content: space-between;">
         <i class="fa-solid fa-xmark" style="font-size: 24px; cursor: pointer;" id="closeMenu"></i>
@@ -279,7 +280,7 @@
                   </label>
                 </li>
                 <li class="checkbox">
-                  <label for="blender">
+                  <label for="blender" style="margin-bottom: 40px;">
                     <div class="check">
                       <span class="custom-checkbox">
                         <div class="check-fill"></div>
@@ -308,7 +309,10 @@
         </div>
         <div class="second-row">
           <div class="carousel-wrapper">
-            <div class="carousel">
+            <div class="carousel-arrow left" id="prevBtn">
+              <i class="fa-regular fa-circle-left" style="font-size: 32px;"></i>
+            </div>
+            <div class="carousel" id="carousel">
               <div class="item">All<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
               <div class="item">UI/UX Design<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
               <div class="item">Frontend<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
@@ -321,6 +325,9 @@
               <div class="item">Motion Design<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
               <div class="item">Illustration<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
               <div class="item">3D<img src="./Assets/icons/right-facing-arrow.png" alt="" width="7.5px" height="12px"></div>
+            </div>
+            <div class="carousel-arrow right" id="nextBtn">
+              <i class="fa-regular fa-circle-right" style="font-size: 32px;"></i>
             </div>
           </div>
         </div>
@@ -336,5 +343,37 @@
     <script src="./javascript/gridContent.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/menu.js"></script>
+
+    <script>
+      const carousel = document.getElementById('carousel');
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+
+      const scrollAmount = 200;
+
+      function updateArrowVisibility() {
+          
+          prevBtn.style.display = carousel.scrollLeft <= 0 ? 'none' : 'flex';
+
+          
+          const atEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
+          nextBtn.style.display = atEnd ? 'none' : 'flex';
+        }
+      
+      
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      carousel.addEventListener('scroll', updateArrowVisibility);
+
+        
+        window.addEventListener('load', updateArrowVisibility);
+    </script>
+
   </body>
 </html>

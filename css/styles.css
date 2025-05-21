@@ -153,6 +153,7 @@ input[type="search"] {
 
 .content{
     display: flex;
+    position: relative;
     gap: 24px;
     justify-content: space-between;
     padding: 0px 32px;
@@ -401,11 +402,11 @@ label {
 .second-row{
     position: relative;
     width: 100%;
-    
-    
 }
 
 .carousel-wrapper {
+    display: flex;
+    align-items: center;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -419,8 +420,36 @@ label {
     display: none;
 }
 
-.carousel {
+.carousel-arrow{
+    height: 85%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    position: absolute;
+    z-index: 10;
+}
+
+.left{
+    left: 0px;
+    background: linear-gradient(to left, transparent, rgb(255, 255, 255, 0.4));
+    backdrop-filter: blur(5px);
+}
+
+.right{
+    right: 0px;
+    background: linear-gradient(to right, transparent, rgb(255, 255, 255, 0.4));
+    backdrop-filter: blur(5px);
+}
+
+.carousel {
+    position: relative;
+    align-items: center;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    transition: 0.5s;
 }
 
 .item {
@@ -438,7 +467,8 @@ label {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition:  0.3s
+    scroll-behavior: smooth;
+    transition: 0.3s;
 }
 
 .item:not(.active):hover{
@@ -685,9 +715,9 @@ label>.input{
     background-color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     position: absolute;
-    z-index: 10;
+    z-index: 100;
     transition: 0.3s;
 }
 

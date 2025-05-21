@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/media-queries.css" />
-    <title>Edit Profile</title>
+    <link rel="stylesheet" href="./css/media-queries-mobile.css" />
+    <link rel="stylesheet" href="./css/media-queries-tablets.css" />
+    <title>Notification</title>
 </head>
 
 <body>
@@ -75,9 +76,11 @@
     
     </div>
 
+    <div class="background-overlay" id="backgroundOverlay"></div>
+
     <div class="content">
 
-        <div class=" mt notification-dashboard">
+        <div class=" mt notification-dashboard" id="notificationDashboard">
             <h2 class="mb">Filter</h2>
             <p class="fw-500 mb selected">All</p>
             <p class="fw-500 mb">Likes</p>
@@ -85,12 +88,14 @@
             <p class="fw-500 mb">Messages</p>
             <p class="fw-500 mb">Project Update</p>
         </div>
+        
 
         <div class="mt notification-content">
             <div class="d-flex align-center justify-between">
                 <h2>Notifications</h2>
-                <img src="./Assets/icons/setting-icon.png" alt="" width="24px" height="24px">
+                <img src="./Assets/icons/setting-icon.png" alt="" width="24px" height="24px" id="notificationFilter" style="z-index: 20; cursor: pointer;">
             </div>
+
         
             <div class="notifications-parent">
                 <div class="notification-container">
@@ -211,6 +216,26 @@
     <script src="./javascript/web.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/menu.js"></script>
+
+    <script>
+        const notificationdash = document.getElementById("notificationDashboard")
+        const notificationFilter = document.getElementById("notificationFilter");
+        const backgroundOverlay = document.getElementById("backgroundOverlay")
+
+        notificationFilter.addEventListener("click", () => {
+            notificationdash.classList.toggle("notification-filter-display")
+            backgroundOverlay.classList.toggle("notification-filter-display")
+            document.body.classList.toggle("body-scroll")
+        })
+
+        backgroundOverlay.addEventListener("click", () => {
+            if(notificationdash.classList.contains("notification-filter-display")){
+                notificationdash.classList.remove("notification-filter-display")
+                backgroundOverlay.classList.remove("notification-filter-display")
+                document.body.classList.remove("body-scroll")
+            }
+        })
+    </script>
 
 </body>
 
