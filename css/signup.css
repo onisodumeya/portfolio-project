@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(233, 229, 229);
+}
+nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logos {
+    display: flex;
+}
+.logo-img {
+    background-image: url("../image/Logo.png");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin-top: -4px;
+}
+.logo-name {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(2, 175, 2);
+}
+.signup-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.signup-container p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+}
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+#signup-form input {
+    padding: 9px;
+    border: none;
+    border-radius: 3px;
+}
+#signup {
+    background-color: rgb(0, 88, 0);
+    color: white;
+    margin-top: 40px;
+}
+#login {
+    background-color: rgb(0, 88, 0);
+    color: white;
+    margin-top: 40px;
+}
+label {
+    margin-top: 15px;
+}
+.mail-icon {
+    margin-top: -24px;
+    margin-left: 7px;
+    opacity: 50%;
+}
+#email {
+    padding-left: 30px;
+}
+a {
+    text-decoration: none;
+}
