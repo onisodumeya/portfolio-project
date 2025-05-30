@@ -168,6 +168,36 @@
         width: 80%;
     }
 
+    .password-req {
+        gap: 20px;
+    }
+
+    .edit-section{
+
+        width: 100%;
+    }
+
+    .edit-section .section{
+        flex-direction: column;
+    }
+
+    .prifile-content{
+        flex-direction: column;
+    }
+
+    .profile-info{
+        padding: 100px 40px 40px 40px;
+        width: 100%;
+    }
+
+    .logout-btn{
+        display: none;
+    }
+
+    .profile-content{
+        width: 100%;
+    }
+
 }
 
 @media(min-width: 1201px) {

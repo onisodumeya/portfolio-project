@@ -42,13 +42,14 @@
         <div class="notification-bubble" id="notificationCount"></div>
         <img src="./Assets/icons/notification.png" alt="" width="20px"
       /></a>
-      <div class="profile">
-        <div class="profile-picture profile-picture-nav"></div>
-        <div>
-          <h2>Adewale Austin</h2>
-          <p>UI/UX Design Intern</p>
-        </div>
-        <div class="dropdown-arrow"></div>
+      <div>
+        <a href="./userprofile.html" class="profile">
+          <div class="profile-picture profile-picture-nav"></div>
+          <div>
+            <h2 id="name">Adewale Austin</h2>
+            <p id="about">UI/UX Design Intern</p>
+          </div>
+        </a>
       </div>
     </nav>
 
@@ -73,18 +74,19 @@
       <a href="./explore.html">Explore</a>
       <a style="margin-bottom: 40px;" href="./notifications.html">Notifications</a>
 
-      <div class="profile">
-        <div class="profile-picture profile-picture-nav"></div>
-        <div>
-          <h2>Adewale Austin</h2>
-          <p>UI/UX Design Intern</p>
-        </div>
-        <div class="dropdown-arrow"></div>
+      <div>
+        <a href="./userprofile.html" class="profile">
+          <div class="profile-picture profile-picture-nav"></div>
+          <div>
+            <h2 id="name">Adewale Austin</h2>
+            <p id="about">UI/UX Design Intern</p>
+          </div>
+        </a>
       </div>
       
     </div>
 
-     <div class="content">
+    <div class="content">
       <div class="filter" id="filter">
         <div id="closedFilterDisplay" style="display: none; gap: 8px; justify-content: center; align-items: center; padding: 11px; cursor: pointer;">
           <img src="./Assets/icons/mage_filter.png" alt="" width="24px">
@@ -343,6 +345,7 @@
     <script src="./javascript/gridContent.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/menu.js"></script>
+    <script src="./javascript/loginCheck.js"></script>
 
     <script>
       const carousel = document.getElementById('carousel');

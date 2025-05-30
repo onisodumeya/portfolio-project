@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media-queries-mobile.css" />
     <link rel="stylesheet" href="./css/media-queries-tablets.css" />
-    <title>Explore</title>
+    <title>Sign Up</title>
 </head>
 
 <body>
@@ -45,9 +45,11 @@
         <label for="password">
             <h4>Password</h4>
             <input type="password" id="password" class="input">
-            <p style="font-size: 12px; font-weight: 700;">Password must contain at least 1 uppercase letter</p>
-            <p style="font-size: 12px; font-weight: 700;">At least 1 lowercase letter</p>
-            <p style="font-size: 12px; font-weight: 700;">At least 1 number</p>
+            <div class="password-req">
+                <p>Password must contain at least 1 uppercase letter</p>
+                <p>At least 1 lowercase letter</p>
+                <p>At least 1 number</p>
+            </div>
         </label>
         <label for="confirmPassword">
             <h4>Confirm Password</h4>
@@ -58,6 +60,7 @@
         <button class="primary-btn auth-btn" id="signUpBtn">
             Sign Up
             <img src="./Assets/icons/right-arrow-white.png" alt="" width="16px">
+            <span class="spinner hidden"></span>
         </button>
         <p style="color: #808080; font-weight: 700;">Already have an account <a href="./login.html"
         style="color: #006647;"> Login here</a></p>

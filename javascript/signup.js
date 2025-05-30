@@ -37,7 +37,7 @@ confirmPassword.addEventListener("input", () => {
   }
 });
 
-async function loginUser() {
+async function registerUser() {
   const firstname = document.getElementById("firstname").value.trim();
   const lastname = document.getElementById("lastname").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -70,7 +70,15 @@ async function loginUser() {
   }
 }
 
+const spinner = signUpBtn.querySelector(".spinner");
+const btnText = signUpBtn.querySelector(".btn-text");
+
+const img = btnText.nextElementSibling;
+
 signUpBtn.addEventListener("click", () => {
-  loginUser();
+  registerUser();
   
+  spinner.classList.remove("hidden");
+  btnText.textContent = "Registering...";
+  img.style.display = "none";
 });

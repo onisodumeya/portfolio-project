@@ -176,6 +176,10 @@
     .auth-btn {
         width: 80%;
     }
+
+    .password-req {
+        flex-wrap: wrap;
+    }
 }
 
 @media(min-width: 1201px){

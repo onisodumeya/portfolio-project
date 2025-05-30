@@ -27,7 +27,7 @@ async function loginUser() {
     if (data.message === "successful") {
       
       localStorage.setItem("userId", data.data.user._id);
-      // window.location.href = "./dashboard.html";
+      window.location.href = "./explore.html";
     }else{
       message.first
     }
@@ -38,6 +38,15 @@ async function loginUser() {
 }
 
 
+const spinner = loginBtn.querySelector(".spinner");
+const btnText = loginBtn.querySelector(".btn-text");
+
+const img = btnText.nextElementSibling;
+
 loginBtn.addEventListener("click", () => {
   loginUser();
+
+  spinner.classList.remove("hidden");
+  btnText.textContent = "Logging in...";
+  img.style.display = "none";
 })
