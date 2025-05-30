@@ -1080,6 +1080,20 @@ nav {
 }
 
 @media (max-width: 700px) {
+    .skill-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+        justify-content: space-evenly;
+        padding: 50px 20px;
+    }
+
+    .txt {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
     #mail {
         background-color: #003324;
         border: 1px solid #B0E4DD;
@@ -1099,8 +1113,15 @@ nav {
     } 
     .info-two {
         display: flex;
-        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
+
+    .info-two ul{
+        padding-left: 0px;
+    }
+
     .bottom-footer ul {
         display: none;
         list-style-type: none;
