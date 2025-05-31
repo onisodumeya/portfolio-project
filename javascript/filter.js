@@ -11,9 +11,8 @@ checkbox.forEach((check, index) => {
 
     filterText = check.lastChild;
 
-    console.log(filterText);
-    
-    
+    // console.log(filterText);
+
   });
 });
 
@@ -23,6 +22,7 @@ const filterSection = document.getElementById("filterSection");
 const closeFilter = document.getElementById("closeFilterBtn");
 const closeFilterDisplay = document.getElementById("closedFilterDisplay");
 const firstRow = document.getElementById("firstRow");
+
 
 const rightSection = document.getElementById("rightSection");
 
@@ -54,7 +54,6 @@ if(windowWidth <= 800){
     document.body.style.overflow = "hidden";
     filter.style.display = "flex";
 
-    // Use setTimeout instead of setInterval if it's a one-time movement
     intervalId = setTimeout(() => {
       filter.style.left = "0px";
       filter.style.top = "0px";
@@ -64,7 +63,7 @@ if(windowWidth <= 800){
   closeFilter.addEventListener("click", () => {
     filter.style.left = "-100%";
 
-    
+
     setTimeout(() => {
       filter.style.display = "none";
       backgroundCover.style.display = "none";
@@ -94,3 +93,15 @@ if(windowWidth <= 800){
     closeFilterDisplay.style.display = "none";
   });
 }
+
+const arr = []
+
+checkbox.forEach(check => {
+  check.addEventListener("click", () => {
+    if (check.checked) {
+      console.log(check.textContent);
+    } else {
+      console.log("Please accept the terms before proceeding.");
+    }
+  })
+})

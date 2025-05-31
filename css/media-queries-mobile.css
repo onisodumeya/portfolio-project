@@ -180,6 +180,19 @@
     .password-req {
         flex-wrap: wrap;
     }
+
+    .project-desc-form label {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90% !important;
+        /* border: black solid 1px; */
+    }
+
+    label .input {
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+    }
 }
 
 @media(min-width: 1201px){

@@ -49,18 +49,18 @@ async function registerUser() {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({firstname, lastname, email, password})
       }
     );
 
     const data = await response.json();
-    console.log(data.data.user._id);
+    // console.log(data.data.user._id);
     
 
     if (response.ok) {
-      // window.location.href = "./login.html"
+      window.location.href = "./login.html"
       console.log("Login successful:", data);
     } else {
       console.error("Login failed:", data.message);
@@ -70,15 +70,16 @@ async function registerUser() {
   }
 }
 
+const img = document.getElementById("arrow")
 const spinner = signUpBtn.querySelector(".spinner");
-const btnText = signUpBtn.querySelector(".btn-text");
+const btnText = document.getElementById("btnText")
 
-const img = btnText.nextElementSibling;
+// console.log(btnText.textContent);
 
 signUpBtn.addEventListener("click", () => {
   registerUser();
   
-  spinner.classList.remove("hidden");
-  btnText.textContent = "Registering...";
-  img.style.display = "none";
+    spinner.classList.remove("hidden");
+    btnText.textContent = "Registering...";
+    img.style.display = "none";
 });

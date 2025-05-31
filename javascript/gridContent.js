@@ -13,6 +13,7 @@ const contentGrid = document.getElementById("contentGrid");
 
 exploreImages.forEach(image => {
   const div = document.createElement("div");
+  div.setAttribute("class", "project")
   div.classList.add("square");
   div.innerHTML = `<div class="img" style="background-image: url('${image}');"></div>
             <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
@@ -28,3 +29,19 @@ exploreImages.forEach(image => {
 
   contentGrid.appendChild(div);
 });
+
+// const project = document.querySelectorAll(".project")
+
+// const arr = []
+
+// project.forEach(p => {
+//   p.addEventListener("click", () => {
+//     console.log(p);
+
+//     arr.push(p)
+
+//     console.log(arr);
+    
+//   })
+  
+// })
