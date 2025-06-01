@@ -10,6 +10,5 @@ const first = document.getElementById("first");
 const last = document.getElementById("last");
 const user = document.getElementById("username");
 
-first.value = firstName
-last.value = lastName
-user.value = "@"+firstName.toLocaleLowerCase()+lastName.toLocaleLowerCase()
+first.textContent = firstName
+last.textContent = lastName

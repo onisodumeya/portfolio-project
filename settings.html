@@ -230,6 +230,10 @@
             navBtn.classList.toggle("fa-chevron-right")
         })
 
+        const firstName = localStorage.getItem("firstname");
+        const lastName = localStorage.getItem("lastname");
+
+        user.value = "@" + firstName.toLocaleLowerCase() + lastName.toLocaleLowerCase()
     </script>
 </body>
 
