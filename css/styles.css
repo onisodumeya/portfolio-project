@@ -710,15 +710,17 @@ label>.input{
     background-repeat: no-repeat;
 }
 
+.update{
+    background-image: url("../Assets/icons/update.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .notification-dashboard{
     width: 20%;
     background-color: white;
     height: 1000px;
     padding: 20px;
-}
-
-.selected{
-    color: #006647;
 }
 
 .fw-500{
@@ -920,4 +922,14 @@ button {
     background-color: white;
     border-radius: 10px;
     width: fit-content;
+}
+
+.eplore-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-icon-notification{
+    display: none;
 }

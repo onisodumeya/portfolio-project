@@ -21,7 +21,7 @@
     <div class="wallpaper">
         <nav class="nav edit-profile-nav">
             <img src="./Assets/logo/Jodna-logo.png" alt="Jodna Technologies Logo" class="logo" />
-            <a class="explore" href="#">Explore</a>
+            <a class="explore" href="./explore.html">Explore</a>
             <input class="search" type="search" placeholder="Search creatives work..." />
             <a href="./upload-portfolio.html" id="share">
                 <button class="share secondary-btn">
@@ -37,23 +37,24 @@
                 <div class=" profile-picture profile-picture-nav"></div>
                 <a href="./userprofile.html">
                     <div>
-                        <h2 id="name">Adewale Austin</h2>
+                        <h2 class="name">Adewale Austin</h2>
                         <p id="about">UI/UX Design Intern</p>
                     </div>
                 </a>
             </div>
         </nav>
-
+    
         <nav class="nav edit-profile-nav small-screen-nav">
             <img src="./Assets/logo/Jodna-logo.png" alt="Jodna Technologies Logo" class="logo" />
             <i class="fa-solid fa-bars" style="font-size: 24px; cursor: pointer; color: white;" id="menuBtn"></i>
         </nav>
-        
+    
         <div id="backgroundCover"
             style="display: none; position: absolute; top: 0px; background-color: rgba(0, 0, 0, 0.3); z-index: 6; width: 100%; height: 100vh;">
         </div>
         <div class="nav-items" id="navItems">
-            <div style="margin-bottom: 40px; display: flex; align-items: center; width: 100%; justify-content: space-between;">
+            <div
+                style="margin-bottom: 40px; display: flex; align-items: center; width: 100%; justify-content: space-between;">
                 <i class="fa-solid fa-xmark" style="font-size: 24px; cursor: pointer;" id="closeMenu"></i>
                 <a href="./upload-portfolio.html">
                     <button class="share secondary-btn">
@@ -61,68 +62,28 @@
                         <img src="./Assets/icons/right-arrow.png" alt="" width="14px" style="margin: none" />
                     </button>
                 </a>
-        
+    
             </div>
-
+    
             <div class="profile" style="margin-bottom: 40px;">
                 <div class="profile-picture profile-picture-nav"></div>
                 <a href="./userprofile.html">
                     <div>
-                        <h2 id="name">Adewale Austin</h2>
+                        <h2 class="name">Adewale Austin</h2>
                         <p id="about">UI/UX Design Intern</p>
                     </div>
                 </a>
             </div>
-        
+    
             <a href="./explore.html">Explore</a>
             <a href="./notifications.html">Notifications</a>
-        
+    
         </div>
+    
+    
     </div>
 
     <div class="content" style="margin-top: 32px;">
-        <!-- <div class="detail-frame">
-            <div class="profile-picture picture-container" id="profilePicture"></div>
-
-            <div style="width: 246px; text-align: center;">
-                <h1 id="userName">Adewale Austin</h1>
-                <p>UI/UX Designer | Frontend Developer</p>
-            </div>
-
-            <button class="primary-btn" style="align-self: center;">
-                Edit Profile
-            </button> -->
-
-            <!-- <div class="profile-analytics">
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
-                    Portfolio Views
-                    <div id="viewsData">800</div> -->
-                    <!-- <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px"> -->
-                <!-- </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
-                    Likes
-                    <div id="likesData">200</div> -->
-                    <!-- <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px"> -->
-                <!-- </div> -->
-            <!-- </div> -->
-
-            <!-- <div class="profile-analytics">
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
-                    Help
-                    <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px">
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 19px; font-weight: 700;">
-                    Settings
-                    <img src="./Assets/icons/right-facing-arrow.png" alt="" height="12px">
-                </div>
-            </div>
-
-            <button class="secondary-btn" style="margin-top: 100px;" id="logout">
-                <img src="./Assets/icons/logout-icon.png" alt="" height="16px">
-                Logout
-            </button>
-
-        </div> -->
 
         <div class="edit-section">
             <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -133,21 +94,22 @@
 
             <div class="section">
                 Photo
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <div class="profile-picture profile-container"></div>
-                    <button class="secondary-btn" style="height: fit-content;">Change</button>
-                </div>
+                <label for="displayPicture" style="display: flex; gap: 20px; align-items: center;">
+                    <div class="profile-picture profile-container" id="preview"></div>
+                    <input class="secondary-btn" type="file" accept="image/*" id="displayPicture" style="display: none;">
+                    <button class="secondary-btn" style="height: fit-content;" id="displayPictureBtn">Change</button>
+                </label>
             </div>
 
             <div class="edit-section text-inputs">
-                <div class="section edit-name">
+                <div class=" edit-name">
                     <label for="firstName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
                         First name
-                        <input class="input" type="text" id="firstName" Value="Austin">
+                        <input class="input" type="text" id="first" Value="Austin">
                     </label>
                     <label for="lastName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
                         Last name
-                        <input class="input" type="text" id="lastName" Value="Austin">
+                        <input class="input" type="text" id="last" Value="Austin">
                     </label>
                 </div>
                 
@@ -161,14 +123,14 @@
                 <div class="section website">
                     <label for="website" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
                         Website
-                        <input class="input" type="text" id="website" Value="https://">
+                        <input class="input" type="url" id="website" Value="https://">
                     </label>
                 </div>
 
                 <div class="section website">
                     <label for="userName" style="display: flex; flex-direction: column; align-items: start; color: inherit;">
                         Username
-                        <input class="input" type="text" id="userName" Value="Adewaleaustin">
+                        <input class="input" type="text" id="username" Value="Adewaleaustin">
                     </label>
                 </div>
                 </div>
@@ -181,6 +143,7 @@
     </div>
 
     <script src="./javascript/web.js"></script>
+    <script src="./javascript/userInfo.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/menu.js"></script>
     <script src="./javascript/loginCheck.js"></script>
@@ -189,16 +152,6 @@
         const input = document.querySelectorAll(".input")        
         
         const saveBtn = document.getElementById("saveChanges")
-                
-
-        // logout.addEventListener("mouseenter", () => {
-        //     logout.classList.add("mouseenter-sec-btn")
-        //     logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
-        // })
-        // logout.addEventListener("mouseleave", () => {
-        //     logout.classList.remove("mouseenter-sec-btn")
-        //     logout.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
-        // })
 
         input.forEach(change => {
             console.log(change);
@@ -207,7 +160,47 @@
                 saveBtn.classList.remove("inactive-btn")
                 saveBtn.classList.add("primary-btn")
             })
+
         })
+
+
+        const fileInput = document.getElementById("displayPicture");
+            const triggerBtn = document.getElementById("displayPictureBtn");
+
+            triggerBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                fileInput.click(); 
+            });
+
+            const picture = document.getElementById("displayPicture")
+            const preview = document.getElementById("preview")
+
+            let selectedFile;
+
+                picture.addEventListener("change", function () {
+                    selectedFile = this.files[0];
+
+                    if (selectedFile) {
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            const imageURL = e.target.result;
+
+                            // Preview the image
+                            preview.style.backgroundImage = `url(${imageURL})`;
+                            preview.style.backgroundPosition = "center";
+                            preview.style.backgroundSize = "cover";
+
+                            // Enable save button
+                            saveBtn.classList.remove("inactive-btn");
+                            saveBtn.classList.add("primary-btn");
+                        };
+
+                        reader.readAsDataURL(selectedFile);
+                    } else {
+                        console.log("No file selected");
+                    }
+                });
     </script>
 </body>
 

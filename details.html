@@ -2,10 +2,16 @@
 <html lang="en">
 
 <head>
-    <!-- <meta http-equiv="refresh" content="2"> -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
     <title>Details Page</title>
     <link rel="stylesheet" href="./css/details.css">
 </head>
@@ -20,7 +26,7 @@
             </div>
 
             <div class="navbar-items-desk">
-                <div><a href="#">Explore</a></div>
+                <div class="nav-explore"><a href="./explore.html">Explore</a></div>
                 <div class="search-btn">
                     <?xml version="1.0" encoding="utf-8"?>
                     <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
@@ -38,68 +44,97 @@
                 </div>
 
                 <div class="notify-btn">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                    <svg width="22px" height="22px" viewBox="0 0 24 24" id="_24x24_On_Light_Notification-Alert"
-                        data-name="24x24/On Light/Notification-Alert" xmlns="http://www.w3.org/2000/svg">
-                        <rect id="view-box" width="24" height="24" fill="none" />
-                        <path id="Shape"
-                            d="M6,17v-.5H2.25A2.253,2.253,0,0,1,0,14.25v-.382a2.542,2.542,0,0,1,1.415-2.289A1.247,1.247,0,0,0,2.1,10.572l.446-4.91A6.227,6.227,0,0,1,10.618.286a5.477,5.477,0,0,0-.635,1.374A4.794,4.794,0,0,0,8.75,1.5,4.7,4.7,0,0,0,4.045,5.8L3.6,10.708A2.739,2.739,0,0,1,2.089,12.92a1.055,1.055,0,0,0-.589.949v.382A.751.751,0,0,0,2.25,15h13A.751.751,0,0,0,16,14.25v-.382a1.053,1.053,0,0,0-.586-.948A2.739,2.739,0,0,1,13.9,10.708l-.2-2.18a5.473,5.473,0,0,0,1.526.221l.166,1.822a1.26,1.26,0,0,0,.686,1.005,2.547,2.547,0,0,1,1.418,2.29v.382a2.252,2.252,0,0,1-2.25,2.25H11.5V17A2.75,2.75,0,0,1,6,17Zm1.5,0A1.25,1.25,0,0,0,10,17v-.5H7.5ZM15.047,6.744A3.486,3.486,0,0,1,13.5,6.28L13.456,5.8a4.7,4.7,0,0,0-1.648-3.185,3.5,3.5,0,0,1,.61-1.417A6.221,6.221,0,0,1,14.95,5.662l.1,1.081v0Z"
-                            transform="translate(3.25 2.25)" fill="#141124" />
-                        <path id="Shape-2" data-name="Shape" d="M3.5,7A3.5,3.5,0,1,1,7,3.5,3.5,3.5,0,0,1,3.5,7Z"
-                            transform="translate(15 2)" fill="#ff6359" />
-                    </svg>
+                    <a href="./notifications.html">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="22px" height="22px" viewBox="0 0 24 24" id="_24x24_On_Light_Notification-Alert"
+                            data-name="24x24/On Light/Notification-Alert" xmlns="http://www.w3.org/2000/svg">
+                            <rect id="view-box" width="24" height="24" fill="none" />
+                            <path id="Shape"
+                                d="M6,17v-.5H2.25A2.253,2.253,0,0,1,0,14.25v-.382a2.542,2.542,0,0,1,1.415-2.289A1.247,1.247,0,0,0,2.1,10.572l.446-4.91A6.227,6.227,0,0,1,10.618.286a5.477,5.477,0,0,0-.635,1.374A4.794,4.794,0,0,0,8.75,1.5,4.7,4.7,0,0,0,4.045,5.8L3.6,10.708A2.739,2.739,0,0,1,2.089,12.92a1.055,1.055,0,0,0-.589.949v.382A.751.751,0,0,0,2.25,15h13A.751.751,0,0,0,16,14.25v-.382a1.053,1.053,0,0,0-.586-.948A2.739,2.739,0,0,1,13.9,10.708l-.2-2.18a5.473,5.473,0,0,0,1.526.221l.166,1.822a1.26,1.26,0,0,0,.686,1.005,2.547,2.547,0,0,1,1.418,2.29v.382a2.252,2.252,0,0,1-2.25,2.25H11.5V17A2.75,2.75,0,0,1,6,17Zm1.5,0A1.25,1.25,0,0,0,10,17v-.5H7.5ZM15.047,6.744A3.486,3.486,0,0,1,13.5,6.28L13.456,5.8a4.7,4.7,0,0,0-1.648-3.185,3.5,3.5,0,0,1,.61-1.417A6.221,6.221,0,0,1,14.95,5.662l.1,1.081v0Z"
+                                transform="translate(3.25 2.25)" fill="#141124" />
+                            <path id="Shape-2" data-name="Shape" d="M3.5,7A3.5,3.5,0,1,1,7,3.5,3.5,3.5,0,0,1,3.5,7Z"
+                                transform="translate(15 2)" fill="#ff6359" />
+                        </svg>
+                    </a>
                 </div>
             </div>
 
 
             <div class="mob-user">
-                <div id="user-img"></div>
+                <a href="./userprofile.html">
+                    <div id="user-img"></div>
+                </a>
                 <div class="user-details">
                     <div id="username">Adewale Austin</div>
                     <div id="intern">UI/UX Design Intern</div>
                 </div>
+                <button class="drop-menu-btn">
+                    <div class="drop-menu"xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg fill="#000000" height="8px" width="8px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                             viewBox="0 0 330 330" xml:space="preserve">
+                        <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                            c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                            s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/>
+                        </svg></div>
+                </button>
             </div>
         </div>
     </nav>
+
 
     <div class="body-bg">
 
         <div class="sub-body">
             <div class="main-body">
-                <div>
-
-
+                <div class="redesign">
                     <div>
                         <h2><span style="color: #00A991;">SmartBanking</span> App Redesign</h2>
-                        <div class="detail">A clean, intuitive, and responsive banking experience designed to improve
+                        <div class="detail">A clean, intuitive, and responsive banking experience designed to
+                            improve
                             trust,
-                            usability, and user retention for Gen Z and Millennial users</div>
+                            usability, and user retention for Gen Z and Millennial users
+                        </div>
                         <p class="detail">Role: UI/UX Design</p>
-                    </div>
 
-                    <div class="overview-detail">
-                        <div>
-                            <h4>Overview</h4>
-                            <div class="detail">This project aimed to modernize and outdated mobile banking app. The
-                                client,
-                                a
-                                fintech startup,
-                                needed a fresh UI and a smoother onboarding experience to reduce user churn and increase
-                                trust.
+                        <div class="overview-detail-mob">
+                            <div>
+                                <h4>Overview</h4>
+                                <div class="detail">This project aimed to modernize and outdated mobile banking app. The
+                                    client,
+                                    a
+                                    fintech startup,
+                                    needed a fresh UI and a smoother onboarding experience to reduce user churn and
+                                    increase
+                                    trust.
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4>Goals & Objectives</h4>
+                                <ul class="detail">
+                                    <li>Simplify navigation flow</li>
+                                    <li>Improve account dashboard responsiveness</li>
+                                    <li>Implement secure but user-friendly login flows</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <div>
-                            <h4>Goals & Objectives</h4>
-                            <ul class="detail">
-                                <li>Simplify navigation flow</li>
-                                <li>Improve account dashboard responsiveness</li>
-                                <li>Implement secure but user-friendly login flows</li>
-                            </ul>
-                        </div>
                     </div>
 
+                    <div class="redesign-images">
+                        <div class="redesign-img-one"></div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="tools-tech">
+                <div>
                     <div>
                         <h4>Tools & Tech Stack</h4>
                         <div class="detail">Figma | React | Firebase Auth | TailwindCSS</div>
@@ -123,17 +158,14 @@
                                 next version.</div>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="redesign-images">
-                    <div class="redesign-img-one"></div>
                     <div class="redesign-img-two"></div>
-
                 </div>
-
-
+                
             </div>
+
 
             <div>
                 <h4>Processes</h4>
@@ -170,13 +202,24 @@
 
             </div>
 
-            <div>
+            <div class="galleries">
                 <h4>Gallery - <span style="color: blue;">Project Visuals</span></h4>
             </div>
 
 
             <div class="scroll-wrapper">
-                <button class="scroll-btn left" onclick="scrollLeft()">&#8678;</button>
+                <button class="scroll-btn left" id="scrollleft">
+                    <?xml version="1.0" encoding="utf-8"?>
+
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="35px" height="35px" viewBox="-19.04 0 75.803 75.803" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group_64" data-name="Group 64" transform="translate(-624.082 -383.588)">
+                            <path id="Path_56" data-name="Path 56"
+                                d="M660.313,383.588a1.5,1.5,0,0,1,1.06,2.561l-33.556,33.56a2.528,2.528,0,0,0,0,3.564l33.556,33.558a1.5,1.5,0,0,1-2.121,2.121L625.7,425.394a5.527,5.527,0,0,1,0-7.807l33.556-33.559A1.5,1.5,0,0,1,660.313,383.588Z"
+                                fill="#0c2c67" />
+                        </g>
+                    </svg>
+                </button>
 
                 <div class="visual-images" id="visualScroll">
                     <div class="vis">
@@ -244,19 +287,42 @@
                         </div>
                     </div>
                 </div>
-                <button class="scroll-btn right" onclick="scrollRight()">&#8680;</button>
+                <button class="scroll-btn right" id="scrollright">
+                    <?xml version="1.0" encoding="utf-8"?>
+
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="35px" height="35px" viewBox="-19.04 0 75.804 75.804" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Group_65" data-name="Group 65" transform="translate(-831.568 -384.448)">
+                            <path id="Path_57" data-name="Path 57"
+                                d="M833.068,460.252a1.5,1.5,0,0,1-1.061-2.561l33.557-33.56a2.53,2.53,0,0,0,0-3.564l-33.557-33.558a1.5,1.5,0,0,1,2.122-2.121l33.556,33.558a5.53,5.53,0,0,1,0,7.807l-33.557,33.56A1.5,1.5,0,0,1,833.068,460.252Z"
+                                fill="#0c2c67" />
+                        </g>
+                    </svg>
+                </button>
             </div>
 
             <script>
-                const scrollContainer = document.getElementById("visualScroll");
+                const carousel = document.getElementById("visualScroll");
+                const nextBtn = document.getElementById("scrollright");
+                const prevBtn = document.getElementById("scrollleft");
 
-                function scrollLeft() {
-                    scrollContainer.scrollBy({ left: -300, behavior: "smooth" });
+                const scrollAmount = 300;
+
+                function updateArrowVisibility() {
+                    prevBtn.style.display = carousel.scrollLeft <= 0 ? "none" : "flex";
+
+                    nextBtn.style.display = carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth ? "none" : "flex";
                 }
 
-                function scrollRight() {
-                    scrollContainer.scrollBy({ left: 300, behavior: "smooth" });
-                }
+                nextBtn.addEventListener("click", () => {
+                    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+                });
+
+                prevBtn.addEventListener("click", () => {
+                    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+                });
+
+                carousel.addEventListener("scroll", updateArrowVisibility);
             </script>
 
             <div class="satisfied">

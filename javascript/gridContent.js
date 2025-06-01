@@ -15,7 +15,8 @@ exploreImages.forEach(image => {
   const div = document.createElement("div");
   div.setAttribute("class", "project")
   div.classList.add("square");
-  div.innerHTML = `<div class="img" style="background-image: url('${image}');"></div>
+  div.innerHTML = `<a href="./details.html" class="eplore-content">
+          <div class="img" style="background-image: url('${image}');"></div>
             <h4 style="font-weight: 700;">UX Design Fundamentals</h4>
             <div class="tags">
               <p class="design tag-size tag-padding">Design</p>
@@ -25,7 +26,8 @@ exploreImages.forEach(image => {
             <div class="info">
               <p style="color: inherit;">25 mins</p>
               <p style="color: inherit;">890 views</p>
-            </div>`;
+            </div>
+          </a>`;
 
   contentGrid.appendChild(div);
 });

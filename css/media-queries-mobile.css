@@ -193,6 +193,10 @@
         font-weight: 500;
         width: 100%;
     }
+
+    .filter-icon-notification {
+        display: block;
+    }
 }
 
 @media(min-width: 1201px){

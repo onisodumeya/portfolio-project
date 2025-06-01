@@ -22,6 +22,15 @@
         display: none;
     }
 
+    .edit-name{
+        gap: 20px;
+    }
+
+    .edit-name label{
+        width: 100%;
+        flex-direction: row;
+    }
+
     .logo {
         max-width: 180px;
     }
@@ -173,12 +182,7 @@
     }
 
     .edit-section{
-
         width: 100%;
-    }
-
-    .edit-section .section{
-        flex-direction: column;
     }
 
     .prifile-content{
@@ -209,6 +213,10 @@
         font-size: 16px;
         font-weight: 500;
         width: 100%;
+    }
+
+    .filter-icon-notification {
+        display: block;
     }
 
 }

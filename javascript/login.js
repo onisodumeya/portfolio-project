@@ -3,8 +3,6 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 
 
-
-
 async function loginUser() {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
@@ -25,6 +23,10 @@ async function loginUser() {
     
 
     if (data.message === "successful") {
+
+      
+      localStorage.setItem("firstname", data.data.user.fullname.firstname);
+      localStorage.setItem("lastname", data.data.user.fullname.lastname);
       
       localStorage.setItem("userId", data.data.user._id);
       window.location.href = "./explore.html";
@@ -50,3 +52,4 @@ loginBtn.addEventListener("click", () => {
   btnText.textContent = "Logging in...";
   img.style.display = "none";
 })
+

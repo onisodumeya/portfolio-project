@@ -22,12 +22,14 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+            margin-bottom: 40px;
         }
         
         .project-desc-form label{
             flex-direction: column;
             align-items: flex-start;
             width: 40%;
+
             /* border: black solid 1px; */
         }
 
@@ -35,6 +37,10 @@
             font-size: 16px;
             font-weight: 500;
             width: 100%;
+        }
+
+        .input option{
+            width: 50%;
         }
     </style>
 </head>
@@ -123,9 +129,19 @@
                 <h4>Project Description</h4>
                 <textarea type="text" id="description" class="input"></textarea>
             </label>
-            <label for="duration">
-                <h4>Project Duration</h4>
-                <input type="text" id="duration" class="input" placeholder="e.g: 3 Months">
+            <label for="period">
+                <h4>Period</h4>
+                <select name="period" id="period" class="input">
+                    <option value="Hours">Hours</option>
+                    <option value="Days">Days</option>
+                    <option value="Weeks">Weeks</option>
+                    <option value="Months">Months</option>
+                    <option value="Years">Years</option>
+                </select>
+            </label>
+            <label for="count">
+                <h4>Period Count</h4>
+                <input type="number" id="count" class="input" placeholder="eg: 4">
             </label>
             <label for="url">
                 <h4>URL</h4>
@@ -143,6 +159,7 @@
 
 
     <script src="./javascript/web.js"></script>
+    <script src="./javascript/userInfo.js"></script>
     <script src="./javascript/uploadProject.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/loginCheck.js"></script>
