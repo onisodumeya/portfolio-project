@@ -907,7 +907,7 @@ button {
 }
 
 .settings-nav-btn{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -919,6 +919,11 @@ button {
     border-top: 1px solid #cbcbcb;
     border-left: 1px solid #cbcbcb;
     border-radius: 100px 0px 0px 100px ;
+}
+
+.chevron-right{
+    transform: rotate(180deg);
+    transition: 0.3s;
 }
 
 .settings-pic{

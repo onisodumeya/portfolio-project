@@ -87,7 +87,7 @@
         <div class="settings-nav">
 
             <div class="settings-nav-btn">
-                <i class="fa-solid fa-chevron-left" style="font-size: 24px; cursor: pointer; color: black;" id="navBtn"></i>
+                <i class="fa-solid fa-chevron-left" style="font-size: 24px; cursor: pointer; color: black; transition: 0.3s;" id="navBtn"></i>
             </div>
 
             <h2 style="margin-bottom: 10px;">Settings</h2>
@@ -223,11 +223,12 @@
 
         const navBtn = document.getElementById("navBtn");
         const settingsNav = document.querySelector(".settings-nav")
+        const faChevronLeft = document.querySelector(".fa-chevron-left")
 
         navBtn.addEventListener("click", () => {
             settingsNav.classList.toggle("settings-nav-open")
             document.body.classList.toggle("no-overflow")
-            navBtn.classList.toggle("fa-chevron-right")
+            faChevronLeft.classList.toggle("chevron-right")
         })
 
         const firstName = localStorage.getItem("firstname");

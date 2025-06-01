@@ -31,6 +31,10 @@
         flex-direction: row;
     }
 
+    .settings-nav-btn {
+        display: flex;
+    }
+
     .settings-nav{
         right: -50%;
         position: absolute;
