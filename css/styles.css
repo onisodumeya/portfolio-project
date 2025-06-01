@@ -580,6 +580,7 @@ label {
 }
 
 .section{
+    width: 90%;
     font-weight: 700;
     font-size: 23px;
     color: #808080;
@@ -594,9 +595,15 @@ label {
 }
 
 .edit-name{
+    width: 90%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     align-items: last baseline;
+}
+
+.edit-name label{
+    width: 50%;
 }
 
 .settings-mobile-header{
