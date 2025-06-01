@@ -51,6 +51,7 @@ async function uploadProject() {
           if (response.ok) {
             console.log("Project uploaded successfully", result);
             alert("Your project has been uploaded successfully");
+            localStorage.removeItem("image")
             window.location.href = "./explore.html";
           } else {
             console.error("Upload failed:", result);
