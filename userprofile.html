@@ -119,11 +119,6 @@
                 </a>
             </div>
 
-            <button class="secondary-btn logout-btn" style="align-self: flex-start;" id="logoutBtn">
-                <img src="./Assets/icons/logout-icon.png" alt="" height="20px">
-                Logout
-            </button>
-
         </div>
     
         <div class="profile-content">
@@ -154,16 +149,7 @@
     <script src="./javascript/loginCheck.js"></script>
     <script src="./javascript/logout.js"></script>
     <script>
-        const logoutBtn = document.querySelector(".logout-btn");
-
-        logoutBtn.addEventListener("mouseenter", () => {
-            logoutBtn.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
-        })
-        logoutBtn.addEventListener("mouseleave", () => {
-            logoutBtn.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
-        })
-
-
+        
         const sections = document.querySelectorAll(".sections");
 
         sections.forEach(item => {

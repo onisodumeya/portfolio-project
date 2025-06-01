@@ -31,6 +31,27 @@
         flex-direction: row;
     }
 
+    .settings-nav{
+        right: -50%;
+        position: absolute;
+        z-index: 5;
+        width: 50%;
+        transition: 0.3s;
+        border: 1px #cbcbcb solid;
+    }
+
+    .settings-nav .logout-btn {
+        margin-top: 20px !important;
+    }
+
+    .settings-nav-open{
+        right: 20px !important;
+    }
+
+    .settings-mobile-header {
+        display: block;
+    }
+
     .logo {
         max-width: 180px;
     }
@@ -192,10 +213,6 @@
     .profile-info{
         padding: 100px 40px 40px 40px;
         width: 100%;
-    }
-
-    .logout-btn{
-        display: none;
     }
 
     .profile-content{

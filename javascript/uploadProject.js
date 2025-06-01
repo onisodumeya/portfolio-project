@@ -20,31 +20,31 @@ function displayTools() {
 }
 
 async function uploadProject() {
-    const name = document.getElementById("projectName").value;
-    const description = document.getElementById("description").value;
-    const image = localStorage.getItem("image")
+    const project_name = document.getElementById("projectName").value;
+    const project_image = localStorage.getItem("image")
     const period = document.getElementById("period").value;
     const count = document.getElementById("count").value;
-    const url = document.getElementById("url").value;
-
-    const projectData = {
-      project_name: name,
-      project_image: image,
-      period: period,
-      count: count,
-      project_description: description,
-      project_url: url
-    };
+    const project_description = document.getElementById("description").value;
+    const project_url = document.getElementById("url").value;    
 
     try {
         const response = await fetch(
-          "https://jodna-portfolio.onrender.com/project/create", {
+          "https://jodna-portfolio.onrender.com/project/create",
+          {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(projectData),
-          });
+            body: JSON.stringify({
+              project_name,
+              project_image,
+              period,
+              count,
+              project_description,
+              project_url,
+            }),
+          }
+        );
 
           const result = await response.json();
 
