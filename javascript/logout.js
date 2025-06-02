@@ -1,8 +1,18 @@
+const logoutBtn = document.getElementById("logoutBtn")
 
-// logoutBtn.addEventListener("click", () => {
-//     localStorage.removeItem("userId");
-//     window.location.href = "./index.html"
-// })
+
+logoutBtn.addEventListener("mouseenter", () => {
+  logoutBtn.firstElementChild.setAttribute(
+    "src",
+    "./Assets/icons/logout-icon-white.png"
+  );
+});
+logoutBtn.addEventListener("mouseleave", () => {
+  logoutBtn.firstElementChild.setAttribute(
+    "src",
+    "./Assets/icons/logout-icon.png"
+  );
+});
 
 
 async function logoutUser() {
@@ -10,23 +20,19 @@ async function logoutUser() {
     const response = await fetch(
       "https://jodna-portfolio.onrender.com/auth/logout",
       {
-        method: "POST",
-        credentials: "include", // include cookies if you're using sessions
-        headers: {
-          "Content-Type": "application/json",
-          // "Authorization": `Bearer ${token}`, // if using token-based auth
-        },
+        method: "GET",
+        credentials: "include",
+        
       }
     );
 
     if (response.ok) {
-      // Clear cookies/localStorage/etc.
-    //   clearAllCookies();
+
       localStorage.clear();
       sessionStorage.clear();
 
-      // Redirect to login or homepage
-      window.location.href = "login.html";
+
+      window.location.href = "./explore.html";
     } else {
       console.error("Logout failed");
     }
@@ -34,3 +40,8 @@ async function logoutUser() {
     console.error("Error logging out:", error);
   }
 }
+
+
+logoutBtn.addEventListener("click", () => {
+    logoutUser()
+})

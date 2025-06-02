@@ -943,12 +943,13 @@ button {
 
 .socials-wrapper{
     display: flex;
-    align-items: center;
-    gap: 40px;
+    width: fit-content;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .socials{
-    padding: 10px 30px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 10px;

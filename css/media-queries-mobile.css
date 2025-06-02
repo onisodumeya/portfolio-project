@@ -137,7 +137,7 @@
         display: flex;
         position: fixed;
         z-index: 25;
-        width: 80%;
+        width: 80% !important;
         left: -100%;
         top: 0px;
         height: 100vh;
@@ -145,7 +145,8 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         border-radius: 0px;
-        padding-bottom: 50px;
+        padding-left: 40px !important;
+        padding-bottom: 0px !important;
         transition: 0.3s;
     }
 

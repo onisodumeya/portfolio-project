@@ -95,23 +95,20 @@
             <div class="d-flex" style="font-weight: 700; width: 100%; flex-direction: column; gap: 20px; border-top: 2px solid #E6E6E6;
             padding: 20px 0px;">
                 <div class="d-flex" style="justify-content: space-between;">
-                    <p style="font-weight: inherit;">Profile</p>
+                    <a href="./userprofile.html"><p style="font-weight: inherit;">Profile</p></a>
                 </div>
                 <div class="d-flex" style="justify-content: space-between;">
-                    <p style="font-weight: inherit;">Account</p>
-                </div>
-                <div class="d-flex" style="justify-content: space-between;">
-                    <p style="font-weight: inherit;">Notifications</p>
+                    <a href="./notifications.html"><p style="font-weight: inherit;">Notifications</p></a>
                 </div>
             </div>
 
             <div class="d-flex" style="font-weight: 700; width: 100%; flex-direction: column; gap: 20px; border-top: 2px solid #E6E6E6;
             padding: 20px 0px;">
-                <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <div class="d-flex" style="justify-content: space-between; align-items: center; cursor: pointer;">
                     <p style="font-weight: inherit;">Theme</p>
                     <img src="./Assets/icons/right-facing-arrow.png" alt="" height="16px">
                 </div>
-                <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <div class="d-flex" style="justify-content: space-between; align-items: center; cursor: pointer;">
                     <p style="font-weight: inherit;">Support</p>
                     <img src="./Assets/icons/right-facing-arrow.png" alt="" height="16px">
                 </div>
@@ -178,24 +175,12 @@
     </div>
 
 
-
-
     <script src="./javascript/web.js"></script>
     <script src="./javascript/notification.js"></script>
     <script src="./javascript/menu.js"></script>
-    <script src="./javascript/gridContent.js"></script>
     <script src="./javascript/logout.js"></script>
     <script src="./javascript/loginCheck.js"></script>
     <script>
-        const logoutBtn = document.querySelector(".logout-btn");
-
-        logoutBtn.addEventListener("mouseenter", () => {
-            logoutBtn.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon-white.png")
-        })
-        logoutBtn.addEventListener("mouseleave", () => {
-            logoutBtn.firstElementChild.setAttribute("src", "./Assets/icons/logout-icon.png")
-        })
-
 
         const sections = document.querySelectorAll(".sections");
 
@@ -231,10 +216,14 @@
             faChevronLeft.classList.toggle("chevron-right")
         })
 
-        const firstName = localStorage.getItem("firstname");
-        const lastName = localStorage.getItem("lastname");
+        const first = localStorage.getItem("firstname");
+        const last = localStorage.getItem("lastname");
 
-        user.value = "@" + firstName.toLocaleLowerCase() + lastName.toLocaleLowerCase()
+        const firstName = document.getElementById("firstName");
+        const lastName = document.getElementById("lastName");
+
+        firstName.value = first;
+        lastName.value = last;
     </script>
 </body>
 

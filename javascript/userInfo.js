@@ -8,7 +8,6 @@ userName.forEach(user => {
 
 const first = document.getElementById("first");
 const last = document.getElementById("last");
-const user = document.getElementById("username");
 
 first.textContent = firstName
 last.textContent = lastName
