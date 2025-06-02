@@ -469,10 +469,6 @@ h4 {
     
         }
     
-        .overview-detail-mob li {
-            /* margin-left: -20px; */
-        }
-    
         .redesign-images {
             width: 50%;
         }
@@ -752,10 +748,6 @@ h4 {
     
         }
     
-        .overview-detail-mob li {
-            /* margin-left: -20px; */
-        }
-    
         .redesign-images {
             width: 35%;
         }
@@ -1031,10 +1023,6 @@ h4 {
         display: flex;
         gap: 80px;
 
-    }
-
-    .overview-detail-mob li {
-        /* margin-left: -20px; */
     }
 
     .redesign-images {
@@ -1316,10 +1304,6 @@ h4 {
 
     }
 
-    .overview-detail-mob li {
-        /* margin-left: -20px; */
-    }
-
     .redesign-images {
         width: 25%;
     }
@@ -1595,9 +1579,6 @@ h4 {
         display: flex;
         gap: 80px;
         
-    }
-    .overview-detail-mob li {
-        /* margin-left: -20px; */
     }
     .redesign-images {
         width: 25%;
