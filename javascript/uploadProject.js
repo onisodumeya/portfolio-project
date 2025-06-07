@@ -35,6 +35,8 @@ async function uploadProject() {
             headers: {
               "Content-Type": "application/json",
             },
+            credentials: "include",
+            
             body: JSON.stringify({
               project_name,
               project_image,

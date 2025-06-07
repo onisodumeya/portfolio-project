@@ -16,6 +16,22 @@ body {
     position: relative;
 }
 
+.alert{
+    opacity: 0;
+    width: fit-content;
+    height: auto;
+    padding: 20px 40px;
+    background-color: rgb(254, 244, 244);
+    border-bottom: red 5px solid;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    align-self: center;
+    top: 0px;
+    transition: 0.3s;
+}
+
 .nav {
     display: flex;
     align-items: center;

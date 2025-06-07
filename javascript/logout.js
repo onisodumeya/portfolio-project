@@ -20,6 +20,7 @@ async function logoutUser() {
     const response = await fetch(
       "https://jodna-portfolio.onrender.com/auth/logout",
       {
+        
         method: "GET",
         credentials: "include",
         
@@ -28,11 +29,14 @@ async function logoutUser() {
 
     if (response.ok) {
 
-      localStorage.clear();
+      localStorage.removeItem("firstname");
+      localStorage.removeItem("image");
+      localStorage.removeItem("lastname");
+      localStorage.removeItem("userId");
       sessionStorage.clear();
 
 
-      window.location.href = "./explore.html";
+      window.location.href = "./index.html";
     } else {
       console.error("Logout failed");
     }

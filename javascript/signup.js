@@ -44,6 +44,12 @@ async function registerUser() {
   const password = document.getElementById("password").value.trim();
 
   try {
+    const details = {
+      firstname: firstname.toLowerCase(),
+      lastname: lastname.toLowerCase(),
+      email: email.toLowerCase(),
+      password: password,
+    }
     const response = await fetch(
       "https://jodna-portfolio.onrender.com/auth/signup",
       {
@@ -51,7 +57,8 @@ async function registerUser() {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({firstname, lastname, email, password})
+        credentials: "include",
+        body: JSON.stringify(details)
       }
     );
 
@@ -60,10 +67,10 @@ async function registerUser() {
     
 
     if (response.ok) {
+      console.log("Sign up successful:", data);
       window.location.href = "./login.html"
-      console.log("Login successful:", data);
     } else {
-      console.error("Login failed:", data.message);
+      console.error("Sign up failed:", data.message);
     }
   } catch (error) {
     console.error("Network error:", error);
