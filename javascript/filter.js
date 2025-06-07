@@ -2,17 +2,54 @@ const checkbox = document.querySelectorAll(".check");
 const checkFill = document.querySelectorAll(".check-fill");
 const checkBorder = document.querySelectorAll(".custom-checkbox");
 
-let filterText;
+let filterText = [];
+
+const tags = document.querySelectorAll(".tags")
+
+function filterFunction() {
+  const projects = document.querySelectorAll(".project"); // or whatever class wraps a full project
+
+  projects.forEach(project => {
+    const tagElements = project.querySelectorAll(".tags p"); // each tag inside this project
+    const projectTags = Array.from(tagElements).map(tag => tag.textContent.trim().toLowerCase());
+
+    // If filterText is empty, show all projects
+    if (filterText.length === 0) {
+      project.style.display = "flex";
+      return;
+    }
+
+    // Check if any project tag is in filterText
+    const hasMatch = filterText.some(filter => 
+      projectTags.includes(filter.toLowerCase())
+    );
+
+    project.style.display = hasMatch ? "flex" : "none";
+  });
+}
+
 
 checkbox.forEach((check, index) => {
   check.addEventListener("click", () => {
+    
     checkFill[index].classList.toggle("check-fill-block");
     checkBorder[index].classList.toggle("check-border-green");
 
-    filterText = check.lastChild;
+    const tech = check.textContent.trim();
 
-    // console.log(filterText);
+    if (checkFill[index].classList.contains("check-fill-block")) {
+      
+      if (!filterText.includes(tech)) {
+        filterText.push(tech);
+        filterFunction();
+      }
+    } else {
+      
+      filterText = filterText.filter((item) => item !== tech);
+      filterFunction();
+    }
 
+    console.log(filterText);
   });
 });
 
@@ -94,14 +131,15 @@ if(windowWidth <= 800){
   });
 }
 
-const arr = []
+// const arr = []
 
-checkbox.forEach(check => {
-  check.addEventListener("click", () => {
-    if (check.checked) {
-      console.log(check.textContent);
-    } else {
-      console.log("Please accept the terms before proceeding.");
-    }
-  })
-})
+// checkbox.forEach(check => {
+//   check.addEventListener("click", () => {
+//     if (check.classList.contains("check-fill-block")) {
+//       console.log(check.textContent);
+//       arr.push(check.textContent)
+//     } else {
+//       console.log("Revisit JS");
+//     }
+//   })
+// })

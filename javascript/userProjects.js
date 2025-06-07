@@ -1,18 +1,21 @@
 async function fetchUserProjects() {
   // const userId = localStorage.getItem("userId");
   try {
-    const response = await fetch("https://jodna-portfolio.onrender.com/project/all",
+    const response = await fetch(
+      "https://jodna-portfolio.onrender.com/project/user",
       {
         method: "GET",
-        credentials: "include"
-      });
+        credentials: "include",
+      }
+    );
 
-    const result = await response.json(); 
+    const result = await response.json();
     // console.log(result);
-       
 
     if (response.ok) {
-      const projects = result.data.projects;
+      const projects = result.data.project;
+      console.log(projects);
+      
 
       const contentGrid = document.getElementById("contentGrid");
 

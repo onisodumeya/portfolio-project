@@ -1,23 +1,8 @@
 const input = document.getElementById("tech");
-let tech = [];
 
 const uploadBtn = document.getElementById("upload");
 
-input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" || e.key === ",") {
-        e.preventDefault();
-        const value = input.value.trim().replace(/,$/, "");
-        if (value && !tech.includes(value)) {
-            tech.push(value);
-            displayTools();
-            input.value = "";
-        }
-    }
-});
 
-function displayTools() {
-    document.getElementById("toolList").textContent = tech.join(", ");
-}
 
 async function uploadProject() {
     const project_name = document.getElementById("projectName").value;
@@ -25,7 +10,20 @@ async function uploadProject() {
     const period = document.getElementById("period").value;
     const count = document.getElementById("count").value;
     const project_description = document.getElementById("description").value;
-    const project_url = document.getElementById("url").value;    
+    const project_url = document.getElementById("url").value;  
+    
+    const rawTechString = input.value;
+
+    const tech = rawTechString
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item.length > 0);
+
+    // console.log(techArray);
+
+    function displayTools() {
+      document.getElementById("toolList").textContent = tech.join(", ");
+    }
 
     try {
         const response = await fetch(
@@ -44,6 +42,7 @@ async function uploadProject() {
               count,
               project_description,
               project_url,
+              tech
             }),
           }
         );
