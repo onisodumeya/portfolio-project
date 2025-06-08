@@ -23,9 +23,10 @@ async function loginUser() {
     );
 
     const data = await response.json();
-    console.log(data);
+    console.log(data.data.user.avatar.image_url);
 
     if (data.message === "successful") {
+      localStorage.setItem("profilepic", data.data.user.avatar.image_url)
       localStorage.setItem("firstname", data.data.user.fullname.firstname);
       localStorage.setItem("lastname", data.data.user.fullname.lastname);
 

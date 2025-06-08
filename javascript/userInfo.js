@@ -1,6 +1,7 @@
 const userName = document.querySelectorAll(".name");
 const personName = localStorage.getItem("firstname");
 const surname = localStorage.getItem("lastname");
+const dPic = localStorage.getItem("profilepic");
 
 
 const firstLetterFN = personName.slice(0, 1).toUpperCase();
@@ -10,12 +11,19 @@ const firstLettersLN = surname.slice(0, 1).toUpperCase();
 const otherLettersLN = surname.slice(1, surname.length);
 
 userName.forEach(user => {
-    user.textContent =
-      personName.slice(0, 1).toUpperCase() +
-      personName.slice(1, personName.length) +
-      " " +
-      surname.slice(0, 1).toUpperCase() +
-      surname.slice(1, surname.length);
+  user.textContent =
+  personName.slice(0, 1).toUpperCase() +
+  personName.slice(1, personName.length) +
+  " " +
+  surname.slice(0, 1).toUpperCase() +
+  surname.slice(1, surname.length);
+})
+
+const profilePic = document.querySelectorAll(".profile-picture");
+profilePic.forEach(pic => {
+  console.log(dPic);
+  
+  pic.style.backgroundImage = `url(${dPic})`
 })
 
 const first = document.getElementById("first");
